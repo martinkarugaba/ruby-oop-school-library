@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # Represents a student, inheriting from the Person class.
 class Person
   attr_accessor :name, :age

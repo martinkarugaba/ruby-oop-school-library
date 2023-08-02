@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # Represents a teacher, inheriting from the Person class.
 class Student < Person
   def initialize(id, age, classroom, name = 'Unknown', parent_permission: true)
@@ -8,6 +6,6 @@ class Student < Person
   end
 
   def play_hooky
-    "¯\(ツ)/¯"
+    "¯\\(ツ)/¯"
   end
 end
