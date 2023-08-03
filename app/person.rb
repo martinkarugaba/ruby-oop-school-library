@@ -1,9 +1,5 @@
 # Represents a student, inheriting from the Person class.
-class Nameable
-  def correct_name
-    raise NotImplementedError, "Subclasses must implement the correct_name method."
-  end
-end
+require_relative 'Nameable'
 
 class Person < Nameable
   attr_accessor :name, :age
@@ -31,13 +27,5 @@ class Person < Nameable
   end
 end
 
-class Decorator < Nameable
-  def initialize(nameable)
-    @nameable = nameable
-  end
 
-  def correct_name
-    @nameable.correct_name
-  end
-end
 
