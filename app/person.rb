@@ -1,5 +1,9 @@
 # Represents a student, inheriting from the Person class.
-require_relative 'Nameable'
+class Nameable
+  def correct_name
+    raise NotImplementedError, "Subclasses must implement the correct_name method."
+  end
+end
 
 class Person < Nameable
   attr_accessor :name, :age
@@ -16,8 +20,6 @@ class Person < Nameable
     of_age? || @parent_permission
   end
 
-  private
-
   def of_age?
     @age >= 18
   end
@@ -25,7 +27,10 @@ class Person < Nameable
   def correct_name
     @name
   end
-end
 
+  def with_decorator(decorator)
+    decorator.decorate(self)
+  end
+end
 
 
