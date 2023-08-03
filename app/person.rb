@@ -32,5 +32,3 @@ class Person < Nameable
     decorator.decorate(self)
   end
 end
-
-
