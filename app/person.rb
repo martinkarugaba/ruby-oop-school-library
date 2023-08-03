@@ -1,7 +1,7 @@
 # Represents a student, inheriting from the Person class.
 class Nameable
   def correct_name
-    raise NotImplementedError, "Subclasses must implement the correct_name method."
+    raise NotImplementedError, 'Subclasses must implement the correct_name method.'
   end
 end
 
@@ -10,6 +10,7 @@ class Person < Nameable
   attr_reader :id
 
   def initialize(id, age, name = 'Unknown', parent_permission: true)
+    super()
     @id = id
     @name = name
     @age = age
